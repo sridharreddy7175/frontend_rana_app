@@ -1,0 +1,236 @@
+.login-form{
+    border:1px solid lightgrey;
+    border-radius:10px;
+    box-shadow:  1px 1px 10px #00696C;
+}
+
+.custom-bg-btn{
+    background-color: #00696C;
+    border-radius: 10px;
+}
+
+/* .logo-image{
+    height:30px;
+    width:30px;
+} */
+
+.custom-text-color{
+    color: #00696C;
+    font-weight:600;
+}
+
+.custom-background-color{
+    background-color: #00696C;
+}
+
+.custom-cancel-btn {
+    background-color:#EEF5FF;
+}
+
+.sidemenu-item .active{
+    background-color: #00696C;
+    color:white !important;
+}
+ li a:hover{
+    background-color: #00696C;
+    color:white !important;
+}
+
+.breadcum-text-color {
+    color: #00696C !important;
+    font-weight:bold; 
+}
+
+.sidebar{
+    height:calc(100vh - 85px);
+    border-right:1px solid  #00696c33;
+}
+
+.sidebar li{
+    list-style-type: none;
+    border-bottom:1px solid #00696c33;
+}
+
+a.active li{
+    background-color:#00696C;
+    color:white;
+}
+
+.sidebar li:hover{
+    background-color:#00696C;
+    color:white;
+}
+
+.sidebar li.active{
+    background-color:#00696C;
+    color:white;
+}
+
+.nav-list li a.active{
+    background-color:#00696C;
+    color:white;
+}
+.nav-link.active{
+    background-color:#00696C;
+    color:white;
+}
+
+.nav-item:hover{
+    background-color:white !important;
+    color:black !important;
+}
+
+.content-scroll {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.table_new_ui th {
+    border: none;
+  }
+  
+  .table_new_ui th {
+    background-color:#00696C !important;
+    color:white !important;
+  }
+
+  .table-header{
+    background-color:#00696C !important;
+    color:white !important;
+  }
+  
+  .table_new_ui th,
+  .table_new_ui td {
+    font-size: 12px;
+    color: #333333;
+    font-weight: 400;
+  }
+
+  .breadcrumb>li+li:before {
+	content        : "" !important;
+	text-decoration: none !important;
+}
+
+.breadcrumb {
+	padding       : 10px 16px;
+	font-size     : 14px;
+	color         : #aaa !important;
+	letter-spacing: 2px;
+	border-radius : 5px !important
+}
+
+.page-link {
+    color:#00696C !important;
+}
+
+.page-link.active{
+    background-color: #00696C !important;
+    color:white !important;
+}
+
+.page-link:hover {
+    background-color: #00696C !important;
+    color:white !important;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: #00696C !important;
+    color:white !important;
+}
+
+.page-link:focus{
+    box-shadow: none !important;
+}
+
+.disabled {
+    background-color: #EEF5FF !important;
+    color:black !important;
+}
+
+.search{
+    height:31px !important;
+}
+
+.search-position {
+    position:relative;
+    top:-29px;
+    left:45%;
+    padding:6.5px 5px;
+    cursor: pointer;
+}
+
+input[type="text"]{
+    height:31px;
+}
+
+input[type="date"]{
+    height:31px;
+}
+input[type="email"]{
+    height:31px;
+}
+input[type="number"]{
+    height:31px;
+}
+
+.pagination{
+    text-decoration: none !important;
+    list-style-type: none;
+    --bs-pagination-border-color: #00696C !important;
+}
+
+.page-item{
+}
+
+.page-item.disabled{
+    background-color: #EEF5FF !important;
+    color:black !important;
+    --bs-pagination-disabled-bg: #EEF5FF !important;
+    --bs-pagination-disabled-border-color: #00696C;
+    --bs-pagination-disabled-color: black;
+}
+.page-item:hover{
+    color:white !important; 
+}
+
+.active>.page-link, .page-link.active {
+     border-color: none !important;
+}
+
+.modal-show {
+    display: block !important;
+}
+
+.modal-hide {
+    display: none !important;
+}
+
+.modal-bg{
+    background-color:#079ea2 !important;
+     border-radius:10px !important;
+     border:0px !important;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:transparent !important; /* semi-transparent black */
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    /* z-index: 1048; Make sure it appears above other elements */
+    z-index: 1055;
+  }
+
+  .modal-backdrop.show {
+    opacity:1 !important;
+}
