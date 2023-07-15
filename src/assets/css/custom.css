@@ -1,11 +1,14 @@
 .login-form{
     border:1px solid lightgrey;
     border-radius:10px;
-    box-shadow:  1px 1px 10px #00696C;
+    /* box-shadow:  1px 1px 10px #00696C; */
+    box-shadow:  1px 1px 10px  #f5821f;
+
 }
 
 .custom-bg-btn{
-    background-color: #00696C;
+    /* background-color: #00696C; */
+    background-color:  #f5821f;
     border-radius: 10px;
 }
 
@@ -15,12 +18,14 @@
 } */
 
 .custom-text-color{
-    color: #00696C;
+    /* color: #00696C; */
+    color:  #f5821f;
     font-weight:600;
 }
 
 .custom-background-color{
-    background-color: #00696C;
+    /* background-color: #00696C; */
+    background-color: #f5821f;
 }
 
 .custom-cancel-btn {
@@ -28,50 +33,61 @@
 }
 
 .sidemenu-item .active{
-    background-color: #00696C;
+    /* background-color: #00696C; */
+    background-color:  #f5821f;
     color:white !important;
 }
  li a:hover{
-    background-color: #00696C;
+    /* background-color: #00696C; */
+    background-color:  #f5821f;
     color:white !important;
 }
 
 .breadcum-text-color {
-    color: #00696C !important;
+    /* color: #00696C !important; */
+    color:  #f5821f;
     font-weight:bold; 
 }
 
 .sidebar{
     height:calc(100vh - 85px);
-    border-right:1px solid  #00696c33;
+    /* border-right:1px solid  #00696c33; */
+    border-right: 1px solid  #f5821f;
+    
 }
 
 .sidebar li{
     list-style-type: none;
-    border-bottom:1px solid #00696c33;
+    /* border-bottom:1px solid #00696c33; */
+    border-bottom: 1px solid  #f5821f;
 }
 
 a.active li{
-    background-color:#00696C;
+    /* background-color:#00696C; */
+    background-color:  #f5821f;
     color:white;
 }
 
 .sidebar li:hover{
-    background-color:#00696C;
+    /* background-color:#00696C; */
+    background-color:  #f5821f;
     color:white;
 }
 
 .sidebar li.active{
-    background-color:#00696C;
+    /* background-color:#00696C; */
+    background-color:  #f5821f;
     color:white;
 }
 
 .nav-list li a.active{
-    background-color:#00696C;
+    /* background-color:#00696C; */
+    background-color:  #f5821f;
     color:white;
 }
 .nav-link.active{
-    background-color:#00696C;
+    /* background-color:#00696C; */
+    background-color:  #f5821f;
     color:white;
 }
 
@@ -90,12 +106,14 @@ a.active li{
   }
   
   .table_new_ui th {
-    background-color:#00696C !important;
+    /* background-color:#00696C !important; */
+    background-color:  #f5821f !important;
     color:white !important;
   }
 
   .table-header{
-    background-color:#00696C !important;
+    /* background-color:#00696C !important; */
+    background-color:  #f5821f !important;
     color:white !important;
   }
   
@@ -120,21 +138,25 @@ a.active li{
 }
 
 .page-link {
-    color:#00696C !important;
+    /* color:#00696C !important; */
+    color:  #f5821f;
 }
 
 .page-link.active{
-    background-color: #00696C !important;
+    /* background-color: #00696C !important; */
+    background-color:  #f5821f !important;
     color:white !important;
 }
 
 .page-link:hover {
-    background-color: #00696C !important;
+    /* background-color: #00696C !important; */
+    background-color:  #f5821f !important;
     color:white !important;
 }
 
 .active>.page-link, .page-link.active {
-    background-color: #00696C !important;
+    /* background-color: #00696C !important; */
+    background-color:  #f5821f !important;
     color:white !important;
 }
 
@@ -176,7 +198,9 @@ input[type="number"]{
 .pagination{
     text-decoration: none !important;
     list-style-type: none;
-    --bs-pagination-border-color: #00696C !important;
+    /* --bs-pagination-border-color: #00696C !important; */
+    --bs-pagination-border-color: #f5821f !important;
+
 }
 
 .page-item{
@@ -186,7 +210,7 @@ input[type="number"]{
     background-color: #EEF5FF !important;
     color:black !important;
     --bs-pagination-disabled-bg: #EEF5FF !important;
-    --bs-pagination-disabled-border-color: #00696C;
+    --bs-pagination-disabled-border-color: #f5821f;
     --bs-pagination-disabled-color: black;
 }
 .page-item:hover{
@@ -206,7 +230,7 @@ input[type="number"]{
 }
 
 .modal-bg{
-    background-color:#079ea2 !important;
+    background-color:#f5821f !important;
      border-radius:10px !important;
      border:0px !important;
 }

@@ -36,15 +36,6 @@ export const DashboardPage = () => {
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-block d-md-none">
-                  {/* <li className="nav-item">
-                    <a className="nav-link  text-white" aria-current="page" >Users</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active text-white">Sub Users</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link  text-white" >Projects</a>
-                  </li> */}
                   <aside>
                     <SidebarPage />
                   </aside>
@@ -82,25 +73,6 @@ export const DashboardPage = () => {
           </div>
         </div>
       </div>
-      {/* {showlogoutModal &&
-        <div className="modal" tab-index="-1"   style={{ display: showlogoutModal ? "block" : "none" }}>
-        <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-                <div className="modal-header">
-                    <h5 className="modal-title">Modal title</h5>
-                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"  onClick={handleModalClosed} ></button>
-                </div>
-                <div className="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleModalClosed}>Close</button>
-                    <button type="button" className="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-      } */}
       {showlogoutModal &&
         <CustomModel ismodalShow={showlogoutModal} modalStatus={getModalStatus} />
       }

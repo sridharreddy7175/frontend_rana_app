@@ -58,19 +58,6 @@ export const Pagination = (props: Props) => {
             <div className='row mb-5'>
                 <div className='col-12'>
                     <div className='pagination-contianer '>
-                        {/* <nav aria-label="Page navigation example">
-                            <ul className="pagination justify-content-end">
-                                <li className="page-item disabled">
-                                    <a className="page-link">Previous</a>
-                                </li>
-                                <li className="page-item"><a className="page-link active" href="#">1</a></li>
-                                <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                <li className="page-item"><a className="page-link" href="#">3</a></li>
-                                <li className="page-item">
-                                    <a className="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav> */}
                         <nav className="mt-3 d-flex justify-content-end" >
                             {pageArray && (
                                 <ul className="pagination justify-content-end">
