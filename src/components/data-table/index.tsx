@@ -58,6 +58,11 @@ export const DataTable: React.FC<Props> = (props: Props) => {
         setItemOffset(newOffset);
     }
 
+    const handleActiveStatus=(data:any)=>{
+        console.log("====>",data)
+
+    }
+
     return (
         <div>
             <div className='container-fluid'>
@@ -93,9 +98,15 @@ export const DataTable: React.FC<Props> = (props: Props) => {
                                                 <React.Fragment key={index}>
                                                     <td>
                                                         {data[el.control]}
+                                                        {
+                                                            el.isEnable && <span>
+                                                                <button onClick={()=>handleActiveStatus(data)}>access</button>
+                                                            </span>
+                                                        }
                                                         {el.title === "Actions" && (
                                                             <div className="actions-view">
                                                                 <span>
+                                                                    
                                                                     {el.isEdit && <i className="bi bi-pencil-square  cursor-pointer edit-icon p-2">
                                                                     </i>}
                                                                     {el.isDelete && <i className="bi bi-trash text-danger fw-bold icon-size cursor-pointer p-2"  >

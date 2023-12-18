@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UsersPage } from "../pages/Dashboard/users/users";
-import { UserForm } from "../pages/Dashboard/users/form";
+import { UsersPage } from "../pages/adminDashboard/users/users";
+import { UserForm } from "../pages/adminDashboard/users/form";
 import { MoviesPage } from "../pages/adminDashboard/movies/movies";
 import { MoviesForm } from "../pages/adminDashboard/movies/moviesForm";
 import { PostsPage } from "../pages/adminDashboard/posts/posts";

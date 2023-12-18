@@ -9,4 +9,5 @@ export interface DataTableCol {
     viewMore?:boolean;
     isPrivileges?:boolean;
     isView?:boolean;
+    isEnable?:boolean
 }

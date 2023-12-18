@@ -1,33 +1,34 @@
-import axios from "axios";
-// import appConfig from "../../../config/constant";
+import Axios from "axios";
 
-export const REGISTER_USER_REQUEST = "REGISTER_USER_REQUEST";
-export const REGISTER_USER_SUCCESS = "REGISTER_USER_SUCCESS";
-export const REGISTER_USER_FAILURE = "REGISTER_USER_FAILURE";
+export const REGISTER_USER_REQUEST:string = 'REGISTER_USER_REQUEST';
+export const REGISTER_USER_SUCCESS:string = 'REGISTER_USER_SUCCESS';
+export const REGISTER_USER_FAILURE:string = 'REGISTER_USER_FAILURE';
 
-// SIGNIN a User
-export const registerUser:any = (userdata: any) => {
-  const { name, phone, email, password } = userdata;
-  console.log("userData------>", userdata);
-  return async (dispatch: any) => {
-    dispatch({ type: REGISTER_USER_REQUEST });
-    const requestBody = {
-      name: name,
-      phone: phone,
-      email: email,
-      password: password,
-    };
-    console.log("ree", requestBody);
 
-    try {
+export const registerUser = (user:any, history : any) => {
+  return async (dispatch:any) => {
+      try {
+          dispatch({type : REGISTER_USER_REQUEST});
+          let dataURL:string = `${process.env.REACT_APP_EXPRESS_SERVER_URL}/api/users/register`;
+          let response = await Axios.post(dataURL, user);
+          dispatch({
+              type : REGISTER_USER_SUCCESS
+          });
 
-      // let dataURL = appConfig.BASE_URL + "/" + "createUser";
-      let dataURL=''
-      let response = await axios.post(dataURL, requestBody);
-      dispatch({ type: REGISTER_USER_SUCCESS, payload: response.data });
-    } catch (error: any) {
-      console.log("error",error.response.data.error)
-      dispatch({ type: REGISTER_USER_FAILURE, payload: error.response.data });
-    }
+          console.log("response-------->",response)
+          // TODO create an alert to display success message
+          // dispatch(alertActions.setAlert(response.data.msg , 'success'));
+          // redirect to login Page
+          // history.push('/users/login');
+      }
+      catch (error) {
+          console.error(error);
+          dispatch({
+              type : REGISTER_USER_FAILURE,
+              payload : {
+                  error : error
+              }
+          });
+      }
   };
 };

@@ -3,21 +3,28 @@ import { DataTableCol } from "../../../components/data-table/types";
 export const UsersDataGridCols: DataTableCol[] = [
     {
         title: 'User Name',
-        control: 'user_name',
+        control: 'name',
         sortable: true,
         canShowColumn: true
     },
     {
         title: 'User Email',
-        control: 'user_email',
+        control: 'email',
         sortable: true,
         canShowColumn: true
     },
     {
         title: 'Phone Number',
-        control: 'phone_number',
+        control: 'phone',
         sortable: true,
         canShowColumn: true
+    },
+    {
+        title: 'active User',
+        control: 'activeStatus',
+        sortable: false,
+        canShowColumn: true,
+        isEnable:true
     },
     {
         title: 'Actions',

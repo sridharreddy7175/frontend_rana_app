@@ -16,7 +16,7 @@ export const ReelsForm = () => {
   return (
     <div className="container-fluid mb-5">
       <h3 className="text-start my-2">Create Reels</h3>
-      <div className="row">
+      {/* <div className="row">
         <div className="col-6">
           <LabelBox name="Story" />
           <InputTextBox name="Story" />
@@ -29,7 +29,7 @@ export const ReelsForm = () => {
           <LabelBox name="Share" />
           <InputTextBox name="Share" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

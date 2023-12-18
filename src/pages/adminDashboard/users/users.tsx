@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DataTable } from "../../../components/data-table";
 import { UsersDataGridCols } from "./data-grid-cols";
 import { Breadcum } from "../../../components/breadcum";
 import { NavLink } from "react-router-dom";
 import { Search } from "../../../components/search/search";
 import { FilterSearch } from "../../../components/search/filter-search";
+import {AdminService} from '../../../app/service/admin.service'
+import { toast } from "react-toastify";
 
 export const UsersPage = () => {
   const [breadcumInfo, setBreadcumInfo] = useState<any>([
@@ -21,45 +23,22 @@ export const UsersPage = () => {
       isActive: false,
     },
   ]);
+  const [usersData,setUserData]=useState([])
 
-  const tableData: any = [
-    {
-      user_name: "admin",
-      user_email: "admin@gmail.com",
-      phone_number: "9534934349",
-    },
-    {
-      user_name: "test",
-      user_email: "test@gmail.com",
-      phone_number: "9534934349",
-    },
-    {
-      user_name: "user 1",
-      user_email: "user@gmail.com",
-      phone_number: "9534934449",
-    },
-    ,
-    {
-      user_name: "user 2",
-      user_email: "user@gmail.com",
-      phone_number: "9534964349",
-    },
-    {
-      user_name: "user 3",
-      user_email: "user@gmail.com",
-      phone_number: "95349343469",
-    },
-    {
-      user_name: "user 4",
-      user_email: "user@gmail.com",
-      phone_number: "9534976349",
-    },
-    {
-      user_name: "user 5",
-      user_email: "user@gmail.com",
-      phone_number: "9534934349",
-    },
-  ];
+  useEffect(()=>{
+    getUsers()
+  },[])
+  const getUsers=()=>{
+    AdminService.getAllUserDetails().then((res:any)=>{
+      if(res.status==="success"){
+        setUserData(res.data)
+      }
+      else{
+        toast.error(res.message);
+      }
+    })
+  }
+
 
   return (
     <div className="container-fluid">
@@ -76,7 +55,7 @@ export const UsersPage = () => {
         </div>
       </div>
       <div className="mt-5">
-        <DataTable tableData={tableData} TableCols={UsersDataGridCols} />
+        <DataTable tableData={usersData} TableCols={UsersDataGridCols} />
       </div>
     </div>
   );

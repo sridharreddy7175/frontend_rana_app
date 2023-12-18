@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import InputTextBox from "../../../components/inputTextBox";
+import InputTextBox from "../../../components/inputTextBox"
 import LabelBox from "../../../components/label";
 
 export const UserForm = () => {
@@ -9,8 +9,8 @@ export const UserForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const handleCancelButton = () => {
-    navigate("/dashboard/users");
+  const handleRegister = () => {
+    console.log("hellowrodl")
   };
 
   return (
@@ -34,7 +34,7 @@ export const UserForm = () => {
           <InputTextBox name="Password" />
         </div>
         <div className="d-flex justify-content-start mt-4">
-          <button className="custom-bg-btn rounded border-0 px-4 text-white py-1 me-2">
+          <button className="custom-bg-btn rounded border-0 px-4 text-white py-1 me-2" onClick={()=>handleRegister()}>
             Submit
           </button>
           <button className="custom-cancel-btn rounded border-0 px-4 py-1">
