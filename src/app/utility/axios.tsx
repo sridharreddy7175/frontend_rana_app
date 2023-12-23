@@ -8,8 +8,14 @@ const API = axios.create({
 
 API.interceptors.request.use(function (config) {
     const token = sessionStorage.getItem('token');
-    config.headers['Content-Type'] = 'application/json';
+    const contentType = config.headers["Content-Type"];
     config.headers.Authorization = token ? `Bearer ${token}` : '';
+    if (contentType === "multipart/form-data") {
+        // Set the Content-Type to multipart/form-data
+        config.headers["Content-Type"] = "multipart/form-data";
+      } else {
+        config.headers["Content-Type"] = "multipart/form-data";
+      }
     return config;
 });
 

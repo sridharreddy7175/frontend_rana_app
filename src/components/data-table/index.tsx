@@ -8,6 +8,7 @@ import ReactPaginate from 'react-paginate';
 interface Props {
     tableData: any;
     TableCols: DataTableCol[];
+    handleActiveUser:(value: any) => void;
     // searchText?: any;
     // pageNumbers?: any;
     // pageNumber: (value: any) => void;
@@ -59,7 +60,10 @@ export const DataTable: React.FC<Props> = (props: Props) => {
     }
 
     const handleActiveStatus=(data:any)=>{
-        console.log("====>",data)
+        if(props.handleActiveUser){
+            props.handleActiveUser(data)
+        }
+
 
     }
 
